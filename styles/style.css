@@ -36,3 +36,50 @@ ul,
 ol {
   list-style: none;
 }
+
+.search-form {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 1140px;
+  padding: 133px 30px;
+}
+
+.content__list {
+  display: flex;
+  flex-direction: column;
+  overflow: scroll;
+  width: 399px;
+  overflow-x: hidden;
+  gap: 30px;
+}
+
+.result {
+ 
+}
+
+.result__video-container {
+  width: 711px;
+}
+
+.result__video {
+  width: 100%;
+}
+.content__details {
+  display: flex;
+  flex-direction: column;
+  height: 534px;
+  gap: 26px;
+  padding-left: 30px;
+  
+}
+
+.content__list {
+  overflow: -moz-scrollbars-none;
+}
