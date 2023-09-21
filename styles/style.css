@@ -74,7 +74,7 @@ ol {
   width: 399px;
   overflow-x: hidden;
   gap: 30px;
-  min-height: calc(100% - 238px);
+  min-height: calc(100% - 236px);
 }
 
 
@@ -92,6 +92,7 @@ ol {
 .content__video-card {
   display: flex;
   justify-content: space-between;
+  padding: 2px 2px;
 }
 
 .content__video-card-thumbnail {
@@ -161,12 +162,17 @@ ol {
   font-size: 30px;
   font-style: normal;
   font-weight: 700;
-  line-height: 100%; /* 30px */
   text-transform: uppercase;
+  line-height: 100%;
 }
 
 .content__list-item:active {
   background: #545050;
+}
+
+
+.content__list-item:has(:focus-visible) {
+  border-color: 1px solid #f00;
 }
 
 .content__list-item:hover {
@@ -233,6 +239,11 @@ video::-webkit-media-controls-panel {
   align-items: center;
 }
 
+.search-form__label:focus {
+  outline: 1px solid #ffffff;
+  outline-offset: 3px;
+}
+
 input[type="checkbox"]:disabled+.search-form__pseudo-checkbox {}
 input[type="checkbox"]:checked+.search-form__pseudo-checkbox::before {
   content: '';
@@ -264,8 +275,13 @@ input[type="checkbox"]:focus-visible+.search-form__pseudo-checkbox {}
   height: 34px;
 }
 
-.search-form__submit-button:active {
+.button:active {
   background: #545050;
+}
+
+.button:focus {
+  outline: 1px solid #ffffff;
+  outline-offset: 3px;
 }
 
 .button:hover {
@@ -275,16 +291,6 @@ input[type="checkbox"]:focus-visible+.search-form__pseudo-checkbox {}
 .more-button {
   width: 399px;
   height: 34px;
-}
-
-.more-button:active {
-  background: #545050;
-}
- /*вот тут пыталась что-то написать*/
-.more-button:focus {
- /* border: 1px solid rgb(255, 255, 255);
-  width: 198px;
-  height: 38px;*/
 }
 
 .search-form__textfield {
@@ -300,13 +306,23 @@ input[type="checkbox"]:focus-visible+.search-form__pseudo-checkbox {}
   height: 27px;
   align-items: center;
   gap: 10px;
-  border-top: 1px solid #FFF;
-  border-bottom: 1px solid #FFF;
-  border-right: 0px;
-  border-left: 0;
+  border: 1px solid #FFF;
+  border-right-color: transparent;
+  border-left-color: transparent;
+  outline: none;
 }
 
-.search-form__textfield:focus {
-  border: 1px solid rgb(255, 255, 255);
+.search-form__textfield:active {
+  border-right-color: #ffffff;
+  border-left-color: #ffffff;
 }
+
+.search-form__label {
+  border: 1px solid transparent;
+  padding: 1px;
+}
+.search-form__label:has(:focus-visible) {
+  border-color: #ffffff;
+}
+
 
