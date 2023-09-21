@@ -74,9 +74,8 @@ ol {
   width: 399px;
   overflow-x: hidden;
   gap: 30px;
-  min-height: calc(100% - 236px);
+  min-height: calc(100% - 238px);
 }
-
 
 .result__video {
   width: 100%;
@@ -142,12 +141,6 @@ ol {
 }
 .content__accent{
   color: #545050;  
-  font-family: Oswald;
-  font-size: 75px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 94%;
-  text-transform: uppercase;
 }
 
 .content__card-link {
