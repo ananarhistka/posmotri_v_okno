@@ -89,10 +89,6 @@ ol {
   height: 100%;
 }
 
-.content__list-item {
- 
-}
-
 .content__video-card {
   display: flex;
   justify-content: space-between;
@@ -130,6 +126,9 @@ ol {
   font-weight: 400;
   line-height: normal;
 }
+.search-form__label-text:hover{
+  text-decoration: underline;
+}
 
 .title {
   color: #FFF;
@@ -164,6 +163,14 @@ ol {
   font-weight: 700;
   line-height: 100%; /* 30px */
   text-transform: uppercase;
+}
+
+.content__list-item:active {
+  background: #545050;
+}
+
+.content__list-item:hover {
+  text-decoration: underline;
 }
 
 .content__video-card-description {
@@ -201,8 +208,8 @@ video::-webkit-media-controls-panel {
 }*/
 .search-form__fieldset {
   display: flex;
-    flex-direction: column;
-    gap: 5px;
+  flex-direction: column;
+  gap: 5px;
 }
 .search-form__checkbox-list {
   display: flex;
@@ -235,3 +242,71 @@ input[type="checkbox"]:checked+.search-form__pseudo-checkbox::before {
   height: 100%;
 }
 input[type="checkbox"]:focus-visible+.search-form__pseudo-checkbox {}
+
+.button {
+  background-color: transparent;
+  border: 1px solid white;
+  text-transform: uppercase;
+  color: #FFF;
+  font-family: Fira Sans Condensed;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.search-form__submit-button {
+  width: 194px;
+  height: 34px;
+}
+
+.search-form__submit-button:active {
+  background: #545050;
+}
+
+.button:hover {
+  text-decoration: underline;
+}
+
+.more-button {
+  width: 399px;
+  height: 34px;
+}
+
+.more-button:active {
+  background: #545050;
+}
+ /*вот тут пыталась что-то написать*/
+.more-button:focus {
+  border: 1px solid rgb(255, 255, 255);
+  width: 198px;
+  height: 38px;
+}
+
+.search-form__textfield {
+  background-color: transparent;
+  color: rgba(255, 255, 255, 0.70);
+  font-family: Fira Sans Condensed;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  display: flex;
+  width: 225px;
+  height: 27px;
+  align-items: center;
+  gap: 10px;
+  border-top: 1px solid #FFF;
+  border-bottom: 1px solid #FFF;
+  border-right: 0px;
+  border-left: 0;
+}
+
+.search-form__textfield:focus {
+  border: 1px solid rgb(255, 255, 255);
+}
+
