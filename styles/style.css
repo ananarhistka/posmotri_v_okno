@@ -226,6 +226,7 @@ fieldset {
   display: flex;
   flex-direction: column;
   gap: 5px;
+  align-self: center;
 }
 .search-form__checkbox-list {
   display: flex;
