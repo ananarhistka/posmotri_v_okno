@@ -13,7 +13,7 @@ html {
   block-size: 100%;
   margin: auto;
   color: #fff;
-  font-family: "Fira Sans Condensed", sans-serif, Arial, Helvetica;
+  font-family: 'Fira Sans Condensed', sans-serif, Arial, Helvetica;
   font-size: 18px;
   background-color: #1b1919;
   display: flex;
@@ -44,14 +44,14 @@ ol {
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
-  height: 54px;
+  min-height: 54px;
 }
 
 .content {
   display: flex;
   align-items: end;
   justify-content: center;
-  max-width: 1140px;
+  width: 1140px;
   gap: 30px;
 }
 
@@ -84,8 +84,6 @@ ol {
 .result__video {
   width: 100%;
   height: 100%;
-  margin: 0;
-  padding: 0;
   object-fit: cover;
 }
 
@@ -99,20 +97,20 @@ ol {
 .content__video-card {
   display: flex;
   justify-content: space-between;
-  padding: 2px 2px;
+  padding:  2px;
 }
 
 .content__video-card-thumbnail {
   display: flex;
   justify-content: right;
-  width: 194px;
+  width: 50%;
   height: 103px;
 }
 
 .content__video-card-description-container {
-  width: 100%;
+  width: 50%;
 }
-
+/*
 .preloader {
   position: relative;
   width: 100%;
@@ -124,11 +122,11 @@ ol {
 .preloader-template {
   height: 399px;
   width: 298px;
-}
+}*/
 
 .search-form__fieldset-title {
   color: #fff;
-  font-family: Fira Sans Condensed, sans-serif, Arial, Helvetica;
+  font-family: 'Fira Sans Condensed', sans-serif, Arial, Helvetica;
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
@@ -152,7 +150,7 @@ ol {
 
 .title {
   color: #fff;
-  font-family: Oswald, sans-serif, Arial, Helvetica;
+  font-family: 'Oswald', sans-serif, Arial, Helvetica;
   font-size: 75px;
   font-style: normal;
   font-weight: 700;
@@ -169,6 +167,11 @@ ol {
   text-decoration: none;
   color: #fff;
   display: block;
+  cursor: pointer;
+}
+
+.content__card-link:hover {
+  text-decoration: underline;
 }
 
 .content__card-link_current {
@@ -184,9 +187,9 @@ ol {
 }
 
 .content__video-card-title {
-  width: 200px;
+  max-width: 200px;
   color: #fff;
-  font-family: Oswald, sans-serif, Arial, Helvetica;
+  font-family: 'Oswald', sans-serif, Arial, Helvetica;
   font-size: 30px;
   font-style: normal;
   font-weight: 700;
@@ -194,14 +197,10 @@ ol {
   line-height: 100%;
 }
 
-.content__list-item:active {
-  background: #545050;
-}
-
 .content__video-card-description {
-  width: 200px;
+  max-width: 200px;
   color: #fff;
-  font-family: Fira Sans Condensed, sans-serif, Arial, Helvetica;
+  font-family: 'Fira Sans Condensed', sans-serif, Arial, Helvetica;
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
@@ -221,10 +220,6 @@ ol {
 
 fieldset {
   border: none;
-}
-
-.search-form__checkbox-list {
-  display: inline;
 }
 
 .search-form__fieldset {
@@ -252,7 +247,7 @@ fieldset {
 }
 
 input[type="checkbox"]:checked + .search-form__pseudo-checkbox::before {
-  content: "";
+  content: '';
   position: relative;
   background-color: #fff;
   width: 100%;
@@ -262,9 +257,8 @@ input[type="checkbox"]:checked + .search-form__pseudo-checkbox::before {
 .button {
   background-color: transparent;
   border: 1px solid white;
-  text-transform: uppercase;
   color: #fff;
-  font-family: Fira Sans Condensed, sans-serif, Arial, Helvetica;
+  font-family: 'Fira Sans Condensed', sans-serif, Arial, Helvetica;
   font-size: 18px;
   font-style: normal;
   font-weight: 700;
@@ -293,32 +287,31 @@ input[type="checkbox"]:checked + .search-form__pseudo-checkbox::before {
 }
 
 .search-form__submit-button {
-  width: 194px;
-  height: 34px;
+  padding: 6px 73.5px;
 }
 
 .more-button:focus-visible {
   outline: 1px solid #fff;
-  margin: 2px 2px;
+  margin: 2px;
   outline-offset: 1px;
 }
 
 .more-button {
-  width: 399px;
-  height: 34px;
+  width: 100%;
+  min-height: 34px;
 }
 
 .search-form__textfield {
   background-color: transparent;
-  color: rgba(255, 255, 255, 0.7);
-  font-family: Fira Sans Condensed, sans-serif, Arial, Helvetica;
+  color: rgb(255, 255, 255);
+  font-family: 'Fira Sans Condensed', sans-serif, Arial, Helvetica;
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
   display: flex;
-  width: 225px;
-  height: 27px;
+  width: 100%;
+  min-height: 27px;
   align-items: center;
   gap: 10px;
   outline: none;
